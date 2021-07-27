@@ -1,15 +1,16 @@
 import axios from 'axios';
 import React, {useState} from 'react'
 import { useHistory } from 'react-router-dom';
-import Home from './Home';
+// import Home from './Home';
 import SignupForm from './SignupForm';
 
 
 function LoginForm(props) {
-    const{ user, setUser} = props
+    // const{ user, setUser} = props
+    const [user, setUser]= useState({username:"", password:"", message:""});
 	const [error, setError] = useState("");
     const hist = useHistory();
-    const routeToHome =() =>{
+    const routeToHome =() =>{        
         hist.push('/home');
         console.log(user)
     }
@@ -21,10 +22,9 @@ function LoginForm(props) {
 
     const loginUser = (newLogin)=>{
         axios.post("https://ft-potluck-planner-backend.herokuapp.com/api/auth/login", newLogin)
-        .then(res => {
-            console.log(res)
+        .then(res => {            
             setUser(res.data.message)
-            console.log(user)
+            localStorage.setItem("user", JSON.stringify(res.data))
             if(res.status == '200'){
                 routeToHome();
             }
