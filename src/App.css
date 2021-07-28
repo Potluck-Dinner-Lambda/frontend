@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  
+  
+  
 }
 
 .App-logo {
@@ -36,3 +39,71 @@
     transform: rotate(360deg);
   }
 }
+
+/* Styles */
+
+/* Header */
+ a{
+  padding: 3rem;
+  justify-content: space-evenly;
+  color:white;
+  
+ 
+}
+ header{
+  background-color:#9999ff;
+  color: white;
+} 
+header p{
+  border-top: thin solid white;
+  margin: 0 0 0 2rem;
+}
+.header{
+  padding:6rem;
+}
+/* Body */
+.App .section-one{
+  background-color:#33334d;
+  color: white;
+  padding: 1rem;
+  
+}
+
+.section-one h2{
+  text-decoration:underline white;
+}
+.section-one button{
+  background-color:#33334d;
+  color: white;
+}
+.App .section-two {
+  background-color: #3d3d5c;
+  color: white;
+  display: flex;
+}
+img{
+  margin-right: 4rem;
+  
+}
+.section-two h2{
+  text-decoration: underline white;
+}
+
+.text button{
+  background-color: #3d3d5c;
+  color: white;
+}
+/* Footer */
+footer{
+  background-color:#1e1e2f;
+  color: white;
+  padding: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer{
+  flex-direction: column;
+  border-left: thin solid white;
+}
+
+
